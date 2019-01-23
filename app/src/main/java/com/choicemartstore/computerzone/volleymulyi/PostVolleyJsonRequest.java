@@ -1,4 +1,4 @@
-package com.choicemartstore.computerzone.volleylibm;
+package com.choicemartstore.computerzone.volleymulyi;
 
 import android.app.Activity;
 import android.util.Log;
@@ -34,23 +34,36 @@ public class PostVolleyJsonRequest {
         this.type = type;
         this.networkurl = netnetworkUrl;
         this.params = params;
-        sendRequest();
         this.isPost = isPost;
         this.isArray = isArray;
+        //Log.d("REQUEST",isArray+"");
+
+        sendRequest();
+
     }
 
     private void sendRequest() {
-        if(isArray == true){
-            if(isPost = true){
+    //    Log.d("REQUEST 1",isArray+"");
+
+        if(this.isArray == true){
+            if(this.isPost == true){
                 APostRequest();
+                Log.d("Co ", "1");
+
             }else{
+                Log.d("Co ", "2");
+
                 AgetRequest();
             }
         }else{
-            if(isPost = true){
+            if(this.isPost == true){
                 OPostRequest();
+                Log.d("Co ", "3");
+
             }else{
                 OgetRequest();
+                Log.d("Co ", "4");
+
             }
         }
 
